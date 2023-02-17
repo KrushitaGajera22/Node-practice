@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+            background-color: lightcyan;
+            font-family: verdana;
+            color: black;
+            padding: 30px;
+        }
+        h1{
+            font-size: 45px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+        p{
+            font-size: 16px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <%- include('partials/nav') -%>
+    <h1>Contact Us!!</h1>
+    <p> Thanks for getting in touch..</p>
+    <p>You Contacted  <%= data.who %> in the <%= data.department %> department.</p>
+    <p>We will reply you at <%= data.email %></p>
+
+</body>
+</html>

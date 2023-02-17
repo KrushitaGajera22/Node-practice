@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+            background-color: lightcyan;
+            font-family: verdana;
+            color: black;
+            padding: 30px;
+        }
+        h1{
+            font-size: 45px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+        p{
+            font-size: 16px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <%- include('partials/nav') -%>
+    <h1>Contact Us!!</h1>
+    <p>Contact us anytime.. </p>
+    <!--<p><%= qs.person %></p>-->  <!-- for printing query string we need to pass that srring inside url -->
+
+    <!-- Query Stringss-->
+    <form id="contact-form" method="post" action="/contact">
+        <label for="who">Who do you want to contact?</label> <br> 
+        <input type="text" name="who" value="<%= qs.person %>"> <br><br>
+        <label for="department">Which department?</label> <br>
+        <input type="text" name="department" value="<%= qs.dept %>"> <br><br>
+        <label for="email">Your email</label> <br>
+        <input type="email" name="email" /> <br><br>
+        <input type="submit" value="submit" />
+    </form>
+</body>
+</html>
